@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+import numpy as np
 
 #The headers allow us to see the content of the website
 #Placing the investment table into a python object.
@@ -10,15 +11,30 @@ soup = BeautifulSoup(html_text, 'lxml')
 table = soup.find('table', class_='calendar__table')
 table_rows = soup.find('tbody')
 
-#Scrapping individual pieces of data
+news = table.find_all('td')
+
+#_______________________________________________CURRENCY____________________________________________
+
+currency = table.find_all('td', class_='calendar__cell calendar__currency currency')
+for row in currency:
+        print(row.text)
+print('_________________________________________________________________________________________')
+
+#_______________________________________________DATE________________________________________________
 
 date_scrapped = table.find('span', class_='date').text.replace(' ','')
-#row = table_rows.find('tr', class_='calendar__row calendar_row calendar__row--grey calendar__row--new-day newday')
-currency = table.find_all('td', class_='calendar__cell calendar__currency currency')
-currency.append(table.find_all())
-print(table.prettify())
-print(currency)
-#for row in table_rows
-
-
 print(date_scrapped)
+print('_________________________________________________________________________________________')
+
+#_______________________________________________NEWS________________________________________________
+news = table.find_all('span', class_='calendar__event-title')
+for event in news:
+    print(event.text)
+
+#_______________________________________________CONSOLIDATE_________________________________________
+consolidate = []
+consolidate = np.stack((currency, news), axis=1)
+
+print(consolidate)
+
+
