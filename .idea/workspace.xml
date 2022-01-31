@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7eb58868-4b9f-47e6-bc61-576714e0d5d3" name="Changes" comment="">
+    <list default="true" id="7eb58868-4b9f-47e6-bc61-576714e0d5d3" name="Changes" comment="Added the currency and news scrap">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
     </list>
@@ -72,6 +72,14 @@
       <option name="presentableId" value="Default" />
       <updated>1643048407362</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added the currency and news scrap">
+      <created>1643629070332</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1643629070332</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -84,5 +92,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added the currency and news scrap" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the currency and news scrap" />
   </component>
 </project>

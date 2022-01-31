@@ -16,8 +16,9 @@ news = table.find_all('td')
 #_______________________________________________CURRENCY____________________________________________
 
 currency = table.find_all('td', class_='calendar__cell calendar__currency currency')
+currency_t = []
 for row in currency:
-        print(row.text)
+        currency_t.append(row.text.strip())
 print('_________________________________________________________________________________________')
 
 #_______________________________________________DATE________________________________________________
@@ -27,13 +28,15 @@ print(date_scrapped)
 print('_________________________________________________________________________________________')
 
 #_______________________________________________NEWS________________________________________________
+
 news = table.find_all('span', class_='calendar__event-title')
+news_t = []
 for event in news:
-    print(event.text)
+    news_t.append(event.text)
 
 #_______________________________________________CONSOLIDATE_________________________________________
 consolidate = []
-consolidate = np.stack((currency, news), axis=1)
+consolidate = np.stack((currency_t, news_t), axis=1)
 
 print(consolidate)
 
